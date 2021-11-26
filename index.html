@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <title>Secret Santi</title>
+
+    </head>
+    <body>
+        <section class="section" id="titleSection">
+            <div class="container has-text-centered is-max-desktop">
+                <a onclick="toggleMysteryMan()"><h1 class="title is-3">Secret Santi</h1></a>
+                <h2 class="subtitle is-5">Secret Santa with friends!</h2>
+                <div id="mysteryManContainer"></div>
+            </div>
+        </section>
+        <section class="section" id="inputSection">
+            <div class="container is-max-desktop">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">
+                            <h1 class="is-size-5">Enter participating players
+                            </h1>
+                        </div>
+                        <div class="card-header-icon">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <a id="hideInput" onclick="hideInputSection()"><ion-icon name="eye-outline"></ion-icon></a>
+                                    <a id="showInput" onclick="showInputSection()"><ion-icon name="eye-off-outline"></ion-icon></a>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="inputCardContent" class="card-content">
+                        <div class="field">
+                            <div class="control">
+                                <textarea name="playerInput" id="playerInput" cols="30" rows="5" class="textarea" placeholder="Enter a UNIQUE name for each player comma seperated (e.g., player1, player2)"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <div id="inputSubmit" class="button" onclick="handleInputSectionSubmit()">Done</div>
+                            </div>
+                            <div class="control">
+                                <div id="inputClear" class="button" onclick="clearPlayerInput()">Clear</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="resultsSection">
+            <div class="container is-max-desktop">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">
+                            <h1 class="is-size-5">Results</h1>
+                        </div>
+                    </div>
+                    <div id="resultsContainer" class="card-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="scripts/index.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
